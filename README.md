@@ -9,9 +9,9 @@
 .externalNativeBuild 文件是 CMake 编译好的文件，显示支持的各种硬件平台的信息，如 ARM、x86等；
 cpp 文件是放置 native 文件的地方，名字可以修改成其他的（只要里面函数名字对应Java native 方法就好）；
 CMakeLists.txt，AS自动生成的 CMake 脚本配置文件
-# value of 3.4.0 or lower.
+ value of 3.4.0 or lower.
 
-# 1.指定cmake版本
+1.指定cmake版本
 cmake_minimum_required(VERSION 3.4.1)
 
 add_library( # Sets the name of the library. ——>2.生成函数库的名字，需要写到程序中的 so 库的名字
@@ -33,9 +33,7 @@ find_library( # Sets the name of the path variable. 设置path变量的名称
               # you want CMake to locate. #指定要查询库的名字
               log )
 
-# Specifies libraries CMake should link to your target library. You
-# can link multiple libraries, such as libraries you define in the
-# build script, prebuilt third-party libraries, or system libraries.
+
 
 target_link_libraries( # Specifies the target library.  目标库, 和上面生成的函数库名字一致
                        native-lib

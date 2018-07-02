@@ -198,6 +198,7 @@ Java_cn_cfanr_jnisample_FieldJni_accessPrivateField(JNIEnv *env, jobject jobj) {
     }
     env->SetIntField(jobj, fid, age);
 }
+
 输出结果：
 
 MainActivity: 调用前：age = 21
